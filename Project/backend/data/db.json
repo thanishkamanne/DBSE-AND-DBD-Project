@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "created_at": "2026-09-19T04:13:02.360Z",
+      "updated_at": "2026-09-19T04:13:02.360Z",
+      "name": "Thanishka Manne",
+      "email": "thanishkamanne@gmail.com",
+      "phone": "1234567127",
+      "password_hash": "$2b$10$gN1wZQQYUMP0dHB1twb.9.6abHHJH.2Pf.B8CESfnKAIERRnWQwEK",
+      "email_verified": 1,
+      "phone_verified": 1,
+      "preferred_verification_channel": "email"
+    },
+    {
+      "id": 4,
+      "created_at": "2026-09-19T04:48:03.167Z",
+      "updated_at": "2026-09-19T04:48:03.167Z",
+      "name": "Hamsi",
+      "email": "hamsika@gmail.com",
+      "phone": "9032840447",
+      "password_hash": "$2b$10$nv46Tlii8plb1r3GMp1gC.NWTPNpqJT4wkXvt0wLVWO.bA1hCOrtm",
+      "email_verified": 0,
+      "phone_verified": 0,
+      "preferred_verification_channel": "email"
+    }
+  ],
+  "otp_verifications": [
+    {
+      "id": 5,
+      "created_at": "2026-09-19T04:48:03.647Z",
+      "updated_at": "2026-09-19T04:48:11.955Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$FWFZzKJ4d4S2GRpbw0hxGebsxoGL7gVM/4zFJt/mlhFmoGgeKwykG",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T04:58:03.638Z",
+      "used_at": "2026-09-19T04:48:11.955Z"
+    },
+    {
+      "id": 6,
+      "created_at": "2026-09-19T04:48:11.959Z",
+      "updated_at": "2026-09-19T04:48:14.151Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$svUh0wMgIeyz8KDuLcWRtOB0VbVHrLyAIfMoQh7lYxYZlgIlRVS8q",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T04:58:11.952Z",
+      "used_at": "2026-09-19T04:48:14.151Z"
+    },
+    {
+      "id": 7,
+      "created_at": "2026-09-19T04:48:14.154Z",
+      "updated_at": "2026-09-19T04:48:21.674Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$LywvOvgxn8kLu2huAzqdTubK89DYO0q5qS7pE60uF9Ge8AXSPTSUm",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T04:58:14.149Z",
+      "used_at": "2026-09-19T04:48:21.674Z"
+    },
+    {
+      "id": 8,
+      "created_at": "2026-09-19T04:48:21.679Z",
+      "updated_at": "2026-09-19T04:51:58.912Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$yeOZl0vXF7Ph01rxudU6buEAT0VxRL953b1WmY6QFHu0Co9QosT1.",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T04:58:21.671Z",
+      "used_at": "2026-09-19T04:51:58.912Z"
+    },
+    {
+      "id": 9,
+      "created_at": "2026-09-19T04:51:58.915Z",
+      "updated_at": "2026-09-19T04:59:17.380Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$xRCxFOuChNZSL4xRgMteyOk37/53joBNcdQrd105n4VWrmuPAdkqW",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T05:01:58.911Z",
+      "used_at": "2026-09-19T04:59:17.380Z"
+    },
+    {
+      "id": 10,
+      "created_at": "2026-09-19T04:59:17.384Z",
+      "updated_at": "2026-09-19T04:59:17.384Z",
+      "user_id": 4,
+      "channel": "email",
+      "destination": "hamsika@gmail.com",
+      "code_hash": "$2b$10$7FlxTHUiicZlkR7QbEOk5uOeGWADO8AKrHsUe..m3yiBj8YLizG9C",
+      "attempts": 0,
+      "max_attempts": 5,
+      "expires_at": "2026-09-19T05:09:17.378Z"
+    }
+  ],
+  "emergency_contacts": [],
+  "sos_incidents": [],
+  "sos_notifications": [],
+  "check_ins": [],
+  "safety_zones": [],
+  "evidence_logs": [],
+  "evidence_records": [],
+  "alerts": [],
+  "user_alerts": [],
+  "network_members": [],
+  "counters": {
+    "users": 5,
+    "otp_verifications": 11,
+    "emergency_contacts": 1,
+    "sos_incidents": 1,
+    "sos_notifications": 1,
+    "check_ins": 1,
+    "safety_zones": 1,
+    "evidence_logs": 1,
+    "evidence_records": 1,
+    "alerts": 1,
+    "user_alerts": 1,
+    "network_members": 1
+  }
+}
