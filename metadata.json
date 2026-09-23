@@ -1,0 +1,7 @@
+{
+  "name": "Women Safety",
+  "description": "A trustworthy, accessible, and responsive personal safety and emergency preparedness platform for women.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
