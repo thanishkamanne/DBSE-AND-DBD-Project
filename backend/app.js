@@ -2,6 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import { testDbConnection } from './db.js';
 import authRoutes from './routes/auth.routes.js';
 import profileRoutes from './routes/profile.routes.js';
@@ -15,6 +18,13 @@ import evidenceRoutes from './routes/evidence.routes.js';
 import alertsRoutes from './routes/alerts.routes.js';
 
 dotenv.config();
+
+// Get the current backend directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// React production build location
+const distPath = path.resolve(__dirname, '../dist');
 
 const app = express();
 
@@ -46,11 +56,17 @@ app.use(
       ) {
         return callback(null, true);
       }
+
       return callback(new Error('Not allowed by CORS'));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'idempotency-key'],
+    allowedHeaders: [
+      'Content-Type',
+      'Authorization',
+      'X-Requested-With',
+      'idempotency-key',
+    ],
   })
 );
 
@@ -100,10 +116,20 @@ app.use('/api', (req, res) => {
 // 4. Global Error Handler for API
 app.use('/api', (err, req, res, next) => {
   console.error('[API Server Error]:', err.message);
+
   res.status(err.status || 500).json({
     success: false,
     error: err.message || 'Internal server error occurred.',
   });
+});
+
+// 5. Serve React frontend in production
+app.use(express.static(distPath));
+
+// 6. React SPA fallback
+// Any non-API route is handled by React Router.
+app.get(/^(?!\/api(?:\/|$)).*/, (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 export default app;
