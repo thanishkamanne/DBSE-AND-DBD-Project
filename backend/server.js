@@ -4,7 +4,7 @@ import { testDbConnection, initDatabase } from './db.js';
 
 dotenv.config();
 
-const PORT = process.env.BACKEND_PORT || 5000;
+const PORT = process.env.PORT || process.env.BACKEND_PORT || 5000;
 
 app.listen(PORT, '0.0.0.0', async () => {
   console.log(`[Women Safety Backend] Express server running on port ${PORT}`);
